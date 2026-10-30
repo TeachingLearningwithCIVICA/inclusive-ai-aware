@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--
+  CIVICA learning object — Designing an Inclusive and AI-Aware Course (v2.0)
+  Author: Dr Mina Sotiriou, European University Institute (Florence School of Transnational Governance)
+  Adapted to the CIVICA frame. Text unchanged. English only, at the author's request;
+  every readable string lives in LANGS.en.
+-->
+<html lang="en" data-theme="light"
+      data-lo-id="civica-tl-inclusive-ai-aware-course-design"
+      data-lo-author="Mina Sotiriou"
+      data-lo-institution="European University Institute"
+      data-lo-published="2026-09-10"
+      data-lo-languages="en"
+      data-lo-type="faculty-guide"
+      data-lo-licence="CC-BY-NC-SA-4.0"
+      data-lo-audience="teacher"
+      data-lo-topics="course-design,learning-outcomes,inclusive-curriculum,generative-ai">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>/* Apply the system theme before first paint, so dark-mode readers see no light flash. */
+if (typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";</script>
+<title>Designing an Inclusive and AI-Aware Course | Teaching &amp; Learning with CIVICA</title>
+<!-- ===== CIVICA learning object metadata: data-lo-*, <meta>, JSON-LD — keep in sync ===== -->
+<meta name="description" content="Defining learning outcomes, aligning assessments with them, and embedding inclusivity throughout a course."/>
+<meta name="author" content="Mina Sotiriou"/>
+<meta name="theme-color" content="#244f9d"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Designing an Inclusive and AI-Aware Course"/>
+<meta property="og:description" content="Defining learning outcomes, aligning assessments with them, and embedding inclusivity throughout a course."/>
+<meta property="og:site_name" content="Teaching and Learning with CIVICA"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Designing an Inclusive and AI-Aware Course",
+  "description": "Defining learning outcomes, aligning assessments with them, and embedding inclusivity throughout a course.",
+  "learningResourceType": "faculty-guide",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher"
+  },
+  "teaches": "Writing learning outcomes, aligning AI-aware assessments with them, and designing an inclusive curriculum",
+  "inLanguage": [
+    "en"
+  ],
+  "datePublished": "2026-09-10",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "version": "2.0",
+  "author": {
+    "@type": "Person",
+    "name": "Mina Sotiriou",
+    "honorificPrefix": "Dr",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "European University Institute"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CIVICA – The European University of Social Sciences",
+    "url": "https://www.civica.eu/"
+  },
+  "isPartOf": {
+    "@type": "Collection",
+    "name": "Teaching and Learning with CIVICA"
+  },
+  "about": [
+    "Course design",
+    "Learning outcomes",
+    "Inclusive curriculum",
+    "Generative AI in assessment"
+  ],
+  "keywords": "course design, learning outcomes, Bloom's taxonomy, constructive alignment, AI-aware assessment, inclusive curriculum"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --civica-mark:#244f9d; --civica-rule:rgba(36,79,157,.22); --on-mark:#FFFFFF;
+  /* The author's palette (shared with her other CIVICA guides). Light-mode changes, hue kept:
+       table header #888780 -> #777670 (white text 3.61 -> 4.56:1)
+       greys #999 / #aaa -> #66655f (2.66 / 2.17 -> 5.4:1) */
+  --bg:#f8f7f4; --surface:#ffffff; --ink:#1a1a1a; --soft:#555555; --muted:#66655f; --line:#e2dfd9; --line-2:#f0ede8;
+  --title-bg:#3C3489; --on-title:#ffffff; --link:#534AB7; --focus:#3C3489;
+  --th-bg:#777670; --on-th:#ffffff;
+  --teal-bg:#E1F5EE; --teal-ink:#04342C; --teal-h:#085041;
+  --purple-bg:#EEEDFE; --purple-ink:#26215C; --purple-h:#3C3489;
+  --coral-bg:#FAECE7; --coral-ink:#4A1B0C; --coral-h:#712B13;
+  --gold-bg:#FBF4E6; --gold-ink:#412402; --gold-h:#7B5E0E;
+  --amber-bg:#FAEEDA; --amber-ink:#412402; --amber-h:#633806;
+  --base-bg:#F1EFE8; --base-ink:#444441;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --civica-mark:#86acda; --civica-rule:rgba(134,172,218,.26); --on-mark:#141413;
+  --bg:#141413; --surface:#1d1d1b; --ink:#ecebe7; --soft:#c9c7c0; --muted:#aeaca5; --line:#353431; --line-2:#2a2927;
+  --title-bg:#2c2766; --on-title:#ffffff; --link:#b5aff5; --focus:#c9c4ff;
+  --th-bg:#4a4945; --on-th:#ffffff;
+  --teal-bg:#10302a; --teal-ink:#c4eee0; --teal-h:#7fd9bf;
+  --purple-bg:#25224a; --purple-ink:#dedbff; --purple-h:#bdb7f7;
+  --coral-bg:#35201a; --coral-ink:#f6d6ca; --coral-h:#f2ad93;
+  --gold-bg:#2e2611; --gold-ink:#f3e2bf; --gold-h:#e6c46e;
+  --amber-bg:#33260f; --amber-ink:#f3e2bf; --amber-h:#f0c47a;
+  --base-bg:#262523; --base-ink:#d3d1ca;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+[hidden]{ display:none !important; }
+html{ -webkit-text-size-adjust:100%; }
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+body{ font-family:var(--font-display); background:var(--bg); color:var(--ink); min-height:100vh; font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+a{ color:var(--link); text-underline-offset:3px; }
+:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:4px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+/* ---------- CIVICA chrome ---------- */
+.skip-link{ position:absolute; left:12px; top:-4rem; z-index:100; background:var(--civica-mark); color:var(--on-mark); font-weight:700; font-size:15px; padding:11px 18px; border-radius:10px; text-decoration:none; transition:top .2s ease; }
+.skip-link:focus{ top:12px; }
+.civica-bar{ border-bottom:1px solid var(--line); }
+.civica-bar > div{ max-width:1100px; margin:0 auto; padding:14px 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.civica-mark{ display:flex; flex-direction:column; gap:2px; text-decoration:none; line-height:1; }
+/* PLACEHOLDER WORDMARK — the CIVICA logo is set in Movement (licensed, NM Type)
+   and cannot be embedded. Swap for the official transparent SVG when available. */
+.civica-wordmark{ font-weight:900; font-size:18px; letter-spacing:.06em; color:var(--civica-mark); }
+.civica-sub{ font-weight:600; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.ctl{ font-family:var(--font-display); font-size:14px; font-weight:700; letter-spacing:.03em; background:transparent; color:var(--ink); border:1.5px solid var(--line); border-radius:999px; padding:9px 15px; cursor:pointer; line-height:1; min-height:36px; }
+.ctl:hover{ border-color:var(--civica-mark); color:var(--civica-mark); }
+.ctl-theme{ display:flex; align-items:center; gap:7px; padding-left:12px; }
+.ctl-theme svg{ width:15px; height:15px; flex-shrink:0; }
+
+/* ---------- the author's layout ---------- */
+.page{ max-width:1100px; margin:0 auto; padding:2rem 1.5rem; }
+.title-bar{ background:var(--title-bg); border-radius:12px; padding:1.2rem 1.8rem; margin-bottom:1.5rem; }
+.title-bar h1{ font-size:26px; font-weight:900; color:var(--on-title); line-height:1.25; }
+.grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-bottom:1.2rem; align-items:start; }
+@media (max-width:900px){ .grid{ grid-template-columns:1fr; } }
+.col{ background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.col-head{ padding:.85rem 1.1rem; border-bottom:1px solid var(--line); }
+.col-head h2{ font-size:18px; font-weight:800; line-height:1.3; }
+.col-body{ padding:1rem 1.1rem 1.1rem; }
+.intro{ font-size:15.5px; color:var(--soft); line-height:1.6; margin-bottom:.85rem; }
+.head-bloom{ background:var(--teal-bg); } .head-bloom h2{ color:var(--teal-h); }
+.head-ai{ background:var(--purple-bg); } .head-ai h2{ color:var(--purple-h); }
+.head-inc{ background:var(--coral-bg); } .head-inc h2{ color:var(--coral-h); }
+.bloom-table{ width:100%; border-collapse:collapse; font-size:14.5px; margin-bottom:.9rem; }
+.bloom-table th{ background:var(--th-bg); color:var(--on-th); padding:7px 9px; text-align:left; font-weight:700; font-size:13.5px; }
+.bloom-table th, .bloom-table td{ vertical-align:top; }
+.bloom-table td{ padding:7px 9px; border-bottom:1px solid var(--line-2); line-height:1.45; }
+.bloom-table th[scope=row]{ background:inherit; color:inherit; font-size:14.5px; }
+.bloom-table tr.pg td, .bloom-table tr.pg th{ font-weight:700; }
+.bloom-table tr.pg.a > *{ background:var(--teal-bg); color:var(--teal-ink); }
+.bloom-table tr.pg.e > *{ background:var(--purple-bg); color:var(--purple-ink); }
+.bloom-table tr.pg.c > *{ background:var(--coral-bg); color:var(--coral-ink); }
+.bloom-table tr.base > *{ background:var(--base-bg); color:var(--base-ink); font-style:italic; font-weight:600; }
+.bloom-table tr.base td{ font-weight:400; }
+.bloom-note{ background:var(--purple-bg); border-radius:8px; padding:.75rem .9rem; font-size:15px; color:var(--purple-h); line-height:1.6; }
+.bloom-note strong{ display:block; margin-bottom:3px; font-size:15px; }
+.card{ border-radius:8px; padding:.85rem .95rem; margin-bottom:.8rem; }
+.card:last-child{ margin-bottom:0; }
+.card h3{ font-size:16px; font-weight:800; margin-bottom:6px; line-height:1.35; }
+.card p{ font-size:15px; line-height:1.6; margin:0 0 7px; }
+.card p:last-child{ margin-bottom:0; }
+.ai-c1{ background:var(--purple-bg); color:var(--purple-ink); } .ai-c1 h3{ color:var(--purple-h); }
+.ai-c2{ background:var(--teal-bg); color:var(--teal-ink); } .ai-c2 h3{ color:var(--teal-h); }
+.ai-c3{ background:var(--gold-bg); color:var(--gold-ink); } .ai-c3 h3{ color:var(--gold-h); }
+.inc-c1{ background:var(--coral-bg); color:var(--coral-ink); } .inc-c1 h3{ color:var(--coral-h); }
+.inc-c2{ background:var(--amber-bg); color:var(--amber-ink); } .inc-c2 h3{ color:var(--amber-h); }
+.ref-mark{ font-size:12px; font-weight:800; text-decoration:none; vertical-align:super; line-height:0; margin-left:2px; }
+.ref-mark.r1{ color:var(--coral-h); } .ref-mark.r2{ color:var(--amber-h); }
+.refs-block{ margin:1rem 0 0; scroll-margin-top:1rem; }
+.refs-block h2{ font-size:13px; font-weight:900; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:6px; }
+.refs-block p{ font-size:14px; color:var(--soft); line-height:1.7; margin-bottom:3px; }
+.refs-block strong.r1{ color:var(--coral-h); } .refs-block strong.r2{ color:var(--amber-h); }
+.footer{ margin-top:2.5rem; padding-top:24px; border-top:1px solid var(--line); }
+.citation{ font-size:14px; font-style:italic; color:var(--soft); margin:0 0 4px; line-height:1.6; max-width:72ch; }
+/* ---------- CIVICA attribution ---------- */
+.attribution{ margin-top:1.4rem; padding-top:1.2rem; border-top:1.5px solid var(--civica-rule); display:grid; gap:.45rem; font-size:14px; color:var(--ink); }
+.attr-value{ flex:1 1 18rem; min-width:0; }
+.attr-line{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.2rem .55rem; margin:0; }
+.attr-label{ font-weight:900; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--civica-mark); flex:0 0 7.5rem; }
+.attribution a{ color:var(--ink); text-decoration-color:var(--civica-rule); }
+.attr-role{ color:var(--muted); font-size:13px; }
+.attr-funding{ margin:.5rem 0 0; font-size:13px; color:var(--muted); }
+@media (max-width:600px){ .attr-label{ flex:1 0 100%; } .civica-sub{ display:none; } .page{ padding:1.5rem 1rem; } .title-bar{ padding:1rem 1.2rem; } .title-bar h1{ font-size:22px; } }
+@media print{ .civica-bar, .skip-link{ display:none !important; } body{ background:#fff; color:#000; } .card, .bloom-table, .col{ break-inside:avoid; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" id="t-skip"></a>
+<div class="civica-bar">
+  <div>
+    <!-- PLACEHOLDER: swap for the official transparent CIVICA SVG if available. -->
+    <a class="civica-mark" href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer" id="t-mark">
+      <span class="civica-wordmark" aria-hidden="true">CIVICA</span>
+      <span class="civica-sub" id="t-mark-sub" aria-hidden="true"></span>
+    </a>
+    <button type="button" class="ctl ctl-theme" id="theme-btn" aria-pressed="false">
+      <span id="theme-icon" aria-hidden="true"></span><span id="theme-label"></span>
+    </button>
+  </div>
+</div>
+<main class="page" id="main">
+  <div class="title-bar"><h1 id="t-title"></h1></div>
+  <div class="grid">
+    <section class="col" aria-labelledby="c1h">
+      <div class="col-head head-bloom"><h2 id="c1h"></h2></div>
+      <div class="col-body">
+        <p class="intro" id="t-c1-intro"></p>
+        <table class="bloom-table">
+          <thead><tr><th scope="col" id="t-th-level"></th><th scope="col" id="t-th-verbs"></th></tr></thead>
+          <tbody id="bloom-rows"></tbody>
+        </table>
+        <div class="bloom-note"><strong id="t-note-h"></strong> <span id="t-note-b"></span></div>
+      </div>
+    </section>
+    <section class="col" aria-labelledby="c2h">
+      <div class="col-head head-ai"><h2 id="c2h"></h2></div>
+      <div class="col-body" id="ai-cards"></div>
+    </section>
+    <section class="col" aria-labelledby="c3h">
+      <div class="col-head head-inc"><h2 id="c3h"></h2></div>
+      <div class="col-body">
+        <p class="intro" id="t-c3-intro"></p>
+        <div id="inc-cards"></div>
+      </div>
+    </section>
+  </div>
+  <section class="refs-block" id="references" aria-labelledby="t-refs-h">
+    <h2 id="t-refs-h"></h2>
+    <p id="t-ref1"></p>
+    <p id="t-ref2"></p>
+  </section>
+  <footer class="footer">
+    <p class="citation" id="t-cite"></p>
+    <!-- ===== CIVICA attribution — mirrors the JSON-LD in <head> ===== -->
+    <div class="attribution">
+      <p class="attr-line"><span class="attr-label" id="t-lbl-author"></span>
+        <span class="attr-value">Dr Mina Sotiriou <span class="attr-role">European University Institute, Florence School of Transnational Governance</span></span></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-published"></span><time id="published-date"></time></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-part"></span>
+        <a href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer">Teaching and Learning with CIVICA</a></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-licence"></span><span id="t-licence" class="attr-value"></span></p>
+      <p class="attr-funding" id="t-funding"></p>
+    </div>
+  </footer>
+</main>
+<p class="sr-only" aria-live="polite" id="live"></p>
+<script>
+(function(){
+const PUBLISHED = "2026-09-10";
+const LICENCE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+const LICENCE_NAME = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)";
+/* ===== Language pack — English only, at the author's request (her text, verbatim). ===== */
+const LANGS = window.LANGS = {}; LANGS.en = {
+ "docTitle": "Designing an Inclusive and AI-Aware Course | Teaching & Learning with CIVICA",
+ "title": "Designing an inclusive and AI-aware course",
+ "col1H": "Define Your Learning Outcomes",
+ "col1Intro": "Learning outcomes describe what students will be able to do. The verb you choose signals the level of thinking you expect. The six levels build on each other. The lower three provide the necessary foundation, and postgraduate study should develop towards the upper three.",
+ "thLevel": "Level",
+ "thVerbs": "Indicative verbs",
+ "bloom": [
+  [
+   "Remember",
+   "define · identify · list · recall · recognise"
+  ],
+  [
+   "Understand",
+   "classify · describe · explain · interpret · summarise"
+  ],
+  [
+   "Apply",
+   "apply · demonstrate · implement · solve · use"
+  ],
+  [
+   "Analyse",
+   "analyse · categorise · compare · differentiate · examine"
+  ],
+  [
+   "Evaluate",
+   "appraise · argue · assess · critique · defend · justify"
+  ],
+  [
+   "Create",
+   "compose · design · develop · formulate · produce"
+  ]
+ ],
+ "noteH": "At postgraduate level",
+ "noteBody": "Outcomes should engage students primarily at the Analyse, Evaluate and Create levels. A student cannot evaluate without first understanding. The upper levels build on, not replace, the lower ones. Begin each outcome with: *By the end of the course, students should be able to…*",
+ "col2H": "Align Assessments with Outcomes",
+ "ai": [
+  [
+   "Alignment is everything",
+   [
+    "The level at which you write your outcomes shapes everything that follows: what you teach, how you teach it and how you assess it. Learning outcomes, learning activities and assessments need to work together as a coherent whole.",
+    "When what happens in your classroom builds specific analytical skills and course-specific perspectives, and your assessment draws directly on those, you have a naturally robust design. The more your assessment is rooted in the distinctive work of your course, the less useful a generic AI response will be."
+   ]
+  ],
+  [
+   "Design AI-aware assessments",
+   [
+    "In the short term, consider whether your current tasks can be made more specific. Assessments that ask students to engage with cases, scenarios or examples drawn from your course rather than from general knowledge are harder for AI to handle well. Making the process visible by setting interim tasks such as outlines, drafts or annotated bibliographies alongside the final submission also reduces the scope for AI to do the work unnoticed.",
+    "Over the medium to longer term, it is worth thinking about whether students should engage with AI tools directly as part of the assessment itself. This might mean asking students to use AI to generate a draft or a set of ideas and then critically evaluate and improve the output, making their own reasoning and judgement the assessed object rather than the product alone. When assessment is designed this way, AI becomes a thinking partner students must interrogate rather than a shortcut they can exploit."
+   ]
+  ],
+  [
+   "A note on using AI in course design",
+   [
+    "AI tools can be helpful when drafting outcomes, assessment briefs or course descriptions. If you use them, review what they produce carefully. AI can generate plausible-sounding outcomes and tasks that may not align with each other, may not reflect the level you intend, or may not connect to the specific context of your course. The judgement about whether your design is coherent and fit for purpose always belongs to you."
+   ]
+  ]
+ ],
+ "col3H": "Embed Inclusivity Throughout",
+ "col3Intro": "An inclusive curriculum is one that allows for diversity of content, material, ideas and methods of assessment. It involves purposefully integrating perspectives that expand and enhance the canon, both within individual papers and across the whole course. It provides students with opportunities to engage with a variety of viewpoints and equips them for a global and diverse environment.",
+ "inc": [
+  [
+   "Reading lists and course content",
+   [
+    "The reading list is one of the most visible signals of whose knowledge counts in your field. Consider whether authors from diverse ethnic, cultural and national backgrounds are present alongside the established canon, whether women, non-binary and trans scholars are visible as knowledge producers, and whether perspectives from the Majority World and from disabled, neurodivergent and LGBTQ+ communities feature in your reading list.",
+    "The same principle applies to the examples, case studies and scenarios you use in class. Diverse material makes the intellectual content richer for everyone."
+   ]
+  ],
+  [
+   "The classroom and assessment",
+   [
+    "All students should feel they have permission to speak, disagree and contribute their own perspective. Being clear about discussion norms, using varied participation formats and being mindful of whose contributions are amplified all support a more inclusive environment.",
+    "When designing AI-aware assessments, prioritise references and examples from the Majority World. For example, draw on a case from the Global South rather than the North Atlantic hemisphere to showcase diverse perspectives and foster inclusivity. AI generated responses will typically struggle to produce authentic Majority World references and examples because most large language models are trained overwhelmingly on data from the Global North, which means they are statistically biased towards Western, Anglophone sources and contexts.",
+    "When designing assessments more broadly, consider whether the format is genuinely the best way to measure the learning you are after, whether your criteria are transparent and whether there is flexibility where genuine need exists. Clear criteria, honest communication and thoughtful design support equitable outcomes without compromising rigour."
+   ]
+  ]
+ ],
+ "refsH": "References",
+ "refs": [
+  [
+   "[1]",
+   "Definition of an inclusive curriculum adapted from Cambridge Centre for Teaching and Learning — ",
+   "Mind the Gap Toolkit: Guiding Principle 3",
+   "https://www.cctl.cam.ac.uk/enhancing-education/guiding-principles#curriculum",
+   "."
+  ],
+  [
+   "[2]",
+   "AI-aware assessment approaches informed by King's College London — ",
+   "AI Guidance: Approaches to Assessment",
+   "https://www.kcl.ac.uk/about/strategy/learning-and-teaching/ai-guidance/approaches-to-assessment",
+   "."
+  ]
+ ],
+ "citation": "Suggested citation: Sotiriou, M. (2026). Designing an Inclusive and AI-Aware Course. EUI Florence School of Transnational Governance. Teaching & Learning with CIVICA.",
+ "developed": "Developed by Dr Mina Sotiriou, EUI – Florence School of Transnational Governance, using Claude (Anthropic), 2026 · v2.0",
+ "refLabel": "Reference {n}",
+ "skip": "Skip to content",
+ "markLabel": "CIVICA — Teaching and Learning (opens in a new tab)",
+ "markSub": "Teaching & Learning",
+ "themeToDark": "Dark",
+ "themeToLight": "Light",
+ "themeToDarkLabel": "Switch to dark mode",
+ "themeToLightLabel": "Switch to light mode",
+ "newTab": " (opens in a new tab)",
+ "lblAuthor": "Author",
+ "lblPublished": "Published",
+ "lblPart": "Part of",
+ "lblLicence": "Licence",
+ "licence": "This work is licensed under {link}, except where otherwise noted.",
+ "funding": "Co-funded by the European Union"
+};
+const T = LANGS.en;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const rich = s => esc(s).replace(/\*(.+?)\*/g,"<em>$1</em>");
+const refMark = n => `<sup><a href="#references" class="ref-mark r${n}" aria-label="${esc(T.refLabel.replace("{n}", n))}">[${n}]</a></sup>`;
+
+document.title = T.docTitle;
+$("t-title").textContent = T.title;
+$("c1h").textContent = T.col1H; $("t-c1-intro").textContent = T.col1Intro;
+$("t-th-level").textContent = T.thLevel; $("t-th-verbs").textContent = T.thVerbs;
+const ROWCLASS = ["base","base","base","pg a","pg e","pg c"];
+$("bloom-rows").innerHTML = T.bloom.map(([lv, verbs], i) => `<tr class="${ROWCLASS[i]}"><th scope="row">${esc(lv)}</th><td>${esc(verbs)}</td></tr>`).join("");
+$("t-note-h").textContent = T.noteH; $("t-note-b").innerHTML = rich(T.noteBody);
+$("c2h").textContent = T.col2H;
+$("ai-cards").innerHTML = T.ai.map(([h, ps], i) => `<div class="card ai-c${i+1}"><h3>${esc(h)}</h3>${ps.map(p => `<p>${esc(p)}</p>`).join("")}</div>`).join("");
+$("c3h").textContent = T.col3H; $("t-c3-intro").innerHTML = esc(T.col3Intro) + refMark(1);
+$("inc-cards").innerHTML = T.inc.map(([h, ps], i) => `<div class="card inc-c${i+1}"><h3>${esc(h)}${i === 1 ? " " + refMark(2) : ""}</h3>${ps.map(p => `<p>${esc(p)}</p>`).join("")}</div>`).join("");
+$("t-refs-h").textContent = T.refsH;
+T.refs.forEach((r, i) => {
+  $("t-ref" + (i+1)).innerHTML = `<strong class="r${i+1}">${esc(r[0])}</strong> ${esc(r[1])}<a href="${r[3]}" target="_blank" rel="noopener noreferrer">${esc(r[2])}<span class="sr-only">${esc(T.newTab)}</span></a>${esc(r[4])}`;
+});
+$("t-cite").innerHTML = esc(T.citation) + "<br>\n" + esc(T.developed);
+
+/* ===== CIVICA frame ===== */
+$("t-skip").textContent = T.skip; $("t-mark").setAttribute("aria-label", T.markLabel); $("t-mark-sub").textContent = T.markSub;
+document.querySelectorAll('.attribution a[target="_blank"]').forEach(a => { const sp = document.createElement("span"); sp.className = "sr-only"; sp.textContent = T.newTab; a.appendChild(sp); });
+$("t-lbl-author").textContent = T.lblAuthor; $("t-lbl-published").textContent = T.lblPublished;
+$("t-lbl-part").textContent = T.lblPart; $("t-lbl-licence").textContent = T.lblLicence; $("t-funding").textContent = T.funding;
+$("t-licence").innerHTML = esc(T.licence).replace("{link}", '<a href="' + LICENCE_URL + '" target="_blank" rel="noopener noreferrer license">' + esc(LICENCE_NAME) + '<span class="sr-only">' + esc(T.newTab) + '</span></a>');
+const pd = $("published-date"); pd.setAttribute("datetime", PUBLISHED);
+pd.textContent = new Intl.DateTimeFormat("en-GB", { day:"numeric", month:"long", year:"numeric", timeZone:"UTC" }).format(new Date(PUBLISHED + "T12:00:00Z"));
+const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>';
+const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1z"/></svg>';
+function updateThemeButton(){
+  const dark = document.documentElement.dataset.theme === "dark";
+  $("theme-icon").innerHTML = dark ? SUN : MOON;
+  $("theme-label").textContent = dark ? T.themeToLight : T.themeToDark;
+  $("theme-btn").setAttribute("aria-pressed", String(dark));
+  $("theme-btn").setAttribute("aria-label", dark ? T.themeToLightLabel : T.themeToDarkLabel);
+}
+$("theme-btn").addEventListener("click", () => {
+  document.documentElement.dataset.theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  updateThemeButton();
+});
+updateThemeButton();
+})();
+</script>
+</body>
+</html>
